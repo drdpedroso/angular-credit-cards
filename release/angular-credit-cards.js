@@ -124,7 +124,7 @@ var Type = _dereq_('./type')
 
 var group19 = /(\d{1,4})(\d{1,4})?(\d{1,4})?(\d{1,4})?(\d{1,3})?/
 
-exports.visa = new Type('Visa', {
+exports.visa = new Type('VISA', {
   pattern: /^4\d{12}(\d{3}|\d{6})?$/,
   eagerPattern: /^4/,
   groupPattern: group19
@@ -146,12 +146,12 @@ exports.dankort = new Type('Dankort', {
   eagerPattern: /^5019/
 })
 
-exports.masterCard = new Type('MasterCard', {
+exports.masterCard = new Type('MASTER', {
   pattern: /^(5[1-5]|2[2-7])\d{14}$/,
   eagerPattern: /^(2|5[1-5])/
 })
 
-exports.americanExpress = new Type('American Express', {
+exports.americanExpress = new Type('AMEX', {
   pattern: /^3[47]\d{13}$/,
   eagerPattern: /^3[47]/,
   groupPattern: /(\d{1,4})(\d{1,6})?(\d{1,5})?/,
